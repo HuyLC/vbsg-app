@@ -1,3 +1,11 @@
-<div *ngFor='let img of imgs'>
-  <img src="{{img.full_picture}}">
+<div id="main">
+  <div class="inner">
+    <div class="columns" *ngFor='let img of imgs'>
+
+        <div class="image fit">
+          <a><img src="{{img.full_picture}}" alt="" /></a>
+        </div>
+      
+    </div>
+  </div>
 </div>
