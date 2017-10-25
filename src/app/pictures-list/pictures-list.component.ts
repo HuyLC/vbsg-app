@@ -24,13 +24,12 @@ export class PicturesListComponent implements OnInit {
   private getPictures() {
     this.pictureService
         .getPictures(this.paging)
-        .subscribe(pictures => {
-          if (this.pictures.length === 0) {
-            this.pictures = pictures.data;
-          }else {
-            this.pictures = this.pictures.concat(pictures.data);
-          }
-          this.paging = pictures.paging.next;
-        });
+        .subscribe(
+          (pictures) => {
+            this.pictures = this.pictures.length === 0 ? pictures.data : this.pictures.concat(pictures.data) ;
+            this.paging = pictures.paging.next;
+          },
+          (err) => { console.log('error', err); }
+        );
   }
 }
