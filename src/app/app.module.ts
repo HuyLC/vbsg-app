@@ -3,22 +3,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FacebookModule } from 'ngx-facebook';
 
 
 import { AppComponent } from './app.component';
+import { PicturesListComponent } from './pictures-list/pictures-list.component';
+import { PictureService } from './picture.service';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PicturesListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    FacebookModule.forRoot()
+    InfiniteScrollModule
   ],
-  providers: [],
+  providers: [
+    PictureService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
