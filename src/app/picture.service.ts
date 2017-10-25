@@ -12,7 +12,7 @@ export class PictureService {
     if (url_paging) {
       url = url_paging;
     }else {
-      url = 'https://graph.facebook.com/v2.10/1173636692750000/feed?fields=id,full_picture,created_time,message,likes,from,place,object_id&limit=16&access_token=' + access_token;
+      url = 'https://graph.facebook.com/v2.10/1173636692750000/feed?fields=id,full_picture,created_time,message,likes,from,place,object_id&limit=8&access_token=' + access_token;
     }
     return this.http.get<any>(url);
   }
