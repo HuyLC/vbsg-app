@@ -7,7 +7,7 @@ export class PictureService {
   // 295900874186826 bag
   constructor (private http: HttpClient) {}
   getPictures(url_paging) {
-    const access_token =  'EAAAAUaZA8jlABANZBfQhn4rw9ZBZCRO1TRv2NcEyec' +
+    const access_token =  'EAAAAUaZA8jlABANZBfQhn4rw9ZBZCRO1TRv2NcEyec'  +
                           'rq88tOKgj9mkxkColJmVx8DsN4a0y1yBy9zoEhPqTtHC' +
                           'cuOVDj99uBMy6RtuROX9DYTkZCGjpiTrkfaAxpMkcZC8' +
                           'OP97QaLuEKVX7MzixKf6LTlsiQmLlWkZD';

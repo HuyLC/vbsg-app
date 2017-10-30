@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { PicturesListComponent } from './pictures-list/pictures-list.component';
 import { PictureService } from './picture.service';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { SpinnerModule } from 'angular2-spinner';
+import { SpinnerModule } from 'angular2-spinner/dist';
 
 @NgModule({
   declarations: [
