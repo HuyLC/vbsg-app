@@ -7,10 +7,7 @@ export class PictureService {
   // 295900874186826 bag
   constructor (private http: HttpClient) {}
   getPictures(url_paging) {
-    const access_token =  `EAAAAUaZA8jlABANZBfQhn4rw9ZBZCRO1TRv2NcEyec
-                           rq88tOKgj9mkxkColJmVx8DsN4a0y1yBy9zoEhPqTtHC
-                           cuOVDj99uBMy6RtuROX9DYTkZCGjpiTrkfaAxpMkcZC8
-                           OP97QaLuEKVX7MzixKf6LTlsiQmLlWkZD`;
+    const access_token =  `EAAAAUaZA8jlABAOonkEwcdAySnvnYjFrtHQ0L3cDpCZCB9msffm0r4ZA01GX5QEHrO42QVSFraAlQxu1Xpa3oTXJsEhfl8V0nZCtngTs3bTvLXNnzZAWKLNE3KxZAk5Y55Y2EVeeQnyKGUGZAxIuukZBgUleCzZA6c5QZD`;
     let url = '';
     if (url_paging) {
       url = url_paging;
