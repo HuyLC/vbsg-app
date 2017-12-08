@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { PictureService } from '../picture.service';
+import { PictureService } from '../../picture.service';
 
 import * as _ from 'lodash';
 
 @Component({
-  selector: 'app-pictures-list',
-  templateUrl: './pictures-list.component.html',
-  styleUrls: ['./pictures-list.component.css']
+  selector: 'app-vbsg',
+  templateUrl: './vbsg.component.html',
+  styleUrls: ['./vbsg.component.css']
 })
-export class PicturesListComponent implements OnInit {
+export class VbsgComponent implements OnInit {
   pictures = [];
+  vsbg_id = 1173636692750000;
   paging: any;
 
   constructor(private pictureService: PictureService) { }
@@ -23,7 +24,7 @@ export class PicturesListComponent implements OnInit {
   }
   private getPictures() {
     this.pictureService
-        .getPictures(this.paging)
+        .getPictures(this.vsbg_id, this.paging)
         .subscribe(
           (pictures) => {
             this.pictures = this.pictures.length === 0 ? pictures.data : this.pictures.concat(pictures.data) ;

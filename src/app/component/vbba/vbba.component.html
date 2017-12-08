@@ -1,0 +1,21 @@
+<div id="main">
+  <div class="inner">
+    <div class="columns">
+
+        <div class="image fit" *ngFor='let picture of pictures'>
+          <a target="_blank" href="http://facebook.com/profile.php?id={{picture.from.id}}"><img src="{{picture.full_picture}}" alt="" /></a>
+        </div>
+        <div
+          infiniteScroll
+          [infiniteScrollDistance]="16"
+          [infiniteScrollThrottle]="1000"
+          (scrolled)="onScroll()">
+        </div>
+
+        <div>
+          <spinner size="100" tickness="4"></spinner>
+        </div>
+        
+    </div>
+  </div>
+</div>
